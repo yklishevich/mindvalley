@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs'
+
+inhibit_all_warnings!
+use_frameworks!
+
+platform :ios, '13.0'
+
+def common_pods
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+end
+
+target "MindvalleyTrial" do
+  common_pods
+  
+  pod 'XCGLogger', '~> 7.0.0'
+  pod 'Alamofire', '~> 5.2'
+  pod 'SGImageCache', '~> 3.0'
+  
+  
+end
+
+target 'MindvalleyTrialTests' do
+  common_pods
+end

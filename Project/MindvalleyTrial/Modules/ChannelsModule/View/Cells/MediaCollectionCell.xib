@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaCollectionCell" id="iii-eZ-SDu" customClass="MediaCollectionCell" customModule="MindvalleyTrial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="407"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="goQ-pY-SlS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="407"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Za0-Jm-BLV" customClass="MindvalleyStyledImageView" customModule="MindvalleyTrial" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="355" height="228"/>
+                        <color key="backgroundColor" name="DownloadableImageBackground"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="228" id="peb-3K-jeD"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-bO-3kb">
+                        <rect key="frame" x="14" y="248" width="351" height="67.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTB-kS-tXx">
+                                <rect key="frame" x="0.0" y="0.0" width="351" height="40"/>
+                                <string key="text">The Cure
+For Loneliness</string>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <color key="textColor" name="PrimaryText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINDVALLEY MENTORING" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-wr-xMf">
+                                <rect key="frame" x="0.0" y="52" width="351" height="15.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
+                                <color key="textColor" name="SecondaryText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Za0-Jm-BLV" secondAttribute="trailing" constant="10" id="42A-ke-YKH"/>
+                    <constraint firstItem="Za0-Jm-BLV" firstAttribute="top" secondItem="goQ-pY-SlS" secondAttribute="top" constant="10" id="8tg-dU-fO5"/>
+                    <constraint firstItem="Za0-Jm-BLV" firstAttribute="leading" secondItem="goQ-pY-SlS" secondAttribute="leading" constant="10" id="CsJ-U8-L2K"/>
+                    <constraint firstItem="NcR-bO-3kb" firstAttribute="top" secondItem="Za0-Jm-BLV" secondAttribute="bottom" constant="10" id="MPL-UU-O6i"/>
+                    <constraint firstItem="NcR-bO-3kb" firstAttribute="leading" secondItem="goQ-pY-SlS" secondAttribute="leading" constant="14" id="yDU-Vu-h0g"/>
+                    <constraint firstAttribute="trailing" secondItem="NcR-bO-3kb" secondAttribute="trailing" constant="10" id="yct-rn-IAU"/>
+                    <constraint firstAttribute="bottom" secondItem="NcR-bO-3kb" secondAttribute="bottom" priority="250" constant="10" id="zUf-AO-otr"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="375" height="407"/>
+            <connections>
+                <outlet property="channelTitleLabel" destination="0xz-wr-xMf" id="7vw-nh-9wV"/>
+                <outlet property="imageHeightConstraint" destination="peb-3K-jeD" id="PUJ-1O-eL3"/>
+                <outlet property="imageToTitleVSpaceContraint" destination="MPL-UU-O6i" id="4k7-4C-WaD"/>
+                <outlet property="imageView" destination="Za0-Jm-BLV" id="E5R-zx-aYl"/>
+                <outlet property="stackLeftMarginConstraint" destination="yDU-Vu-h0g" id="xuB-ex-R0g"/>
+                <outlet property="stackRightMarginConstraint" destination="yct-rn-IAU" id="Gyy-gS-3vG"/>
+                <outlet property="titleAndChannelStackView" destination="NcR-bO-3kb" id="tTk-I2-AHc"/>
+                <outlet property="titleLabel" destination="KTB-kS-tXx" id="aYl-iy-tGl"/>
+            </connections>
+            <point key="canvasLocation" x="-196.37681159420291" y="-69.977678571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DownloadableImageBackground">
+            <color red="0.21568627450980393" green="0.23921568627450981" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.58431372549019611" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+PODS:
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - Alamofire (5.2.1)
+  - MGEvents (1.2.1)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - PromiseKit/Promise (1.7.7)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SGHTTPRequest/Core (1.9.0):
+    - AFNetworking/NSURLSession (~> 3.0)
+    - AFNetworking/Reachability (~> 3.0)
+    - MGEvents (~> 1.1)
+  - SGImageCache (3.0.0):
+    - MGEvents (~> 1.2)
+    - PromiseKit/Promise (~> 1.5)
+    - SGHTTPRequest/Core (~> 1.9)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - SGImageCache (~> 3.0)
+  - XCGLogger (~> 7.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Alamofire
+    - MGEvents
+    - ObjcExceptionBridging
+    - PromiseKit
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SGHTTPRequest
+    - SGImageCache
+    - XCGLogger
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  MGEvents: 989c1396082a25e760f03056bdc0af1b6c439c78
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PromiseKit: 9007df2f9e2ef725467084ab3880cf932ab935a4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SGHTTPRequest: 93646208528eafd758052a92ee4dcf04e0d263c5
+  SGImageCache: ef7daf2cb76a67a79c25a1c1f71fa675c5fc9672
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
+
+PODFILE CHECKSUM: 60a8c62915764fe22d00cd6931c168c3c64fde2e
+
+COCOAPODS: 1.9.1

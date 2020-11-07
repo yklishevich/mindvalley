@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-MindvalleyTrial/Pods-MindvalleyTrial-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/MGEvents/MGEvents.framework
+${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework
+${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SGHTTPRequest/SGHTTPRequest.framework
+${BUILT_PRODUCTS_DIR}/SGImageCache/SGImageCache.framework
+${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework

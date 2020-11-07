@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCategory" representedClassName="CDCategory" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="position" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDChannel" representedClassName="CDChannel" syncable="YES">
+        <attribute name="coverAssetUrl" attributeType="String"/>
+        <attribute name="iconAssetThumbnailURL" optional="YES" attributeType="String"/>
+        <attribute name="mediaCount" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="position" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDEpisode" inverseName="channel" inverseEntity="CDEpisode"/>
+        <relationship name="series" toMany="YES" deletionRule="Nullify" destinationEntity="CDSeriesItem" inverseName="channel" inverseEntity="CDSeriesItem"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+            </uniquenessConstraint>
+            <uniquenessConstraint>
+                <constraint value="position"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDEpisode" representedClassName="CDEpisode" syncable="YES">
+        <attribute name="coverAssetUrl" attributeType="String"/>
+        <attribute name="positionInChannel" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDChannel" inverseName="episodes" inverseEntity="CDChannel"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+                <constraint value="channel"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDNewEpisode" representedClassName="CDNewEpisode" syncable="YES">
+        <attribute name="channelTitle" optional="YES" attributeType="String"/>
+        <attribute name="coverAssetUrl" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+                <constraint value="channelTitle"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDSeriesItem" representedClassName="CDSeriesItem" syncable="YES">
+        <attribute name="coverAssetUrl" optional="YES" attributeType="String"/>
+        <attribute name="positionInChannel" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDChannel" inverseName="series" inverseEntity="CDChannel"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="title"/>
+                <constraint value="channel"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CDCategory" positionX="-36" positionY="72" width="128" height="73"/>
+        <element name="CDChannel" positionX="-27" positionY="45" width="128" height="148"/>
+        <element name="CDEpisode" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="CDNewEpisode" positionX="-36" positionY="72" width="128" height="118"/>
+        <element name="CDSeriesItem" positionX="-9" positionY="81" width="128" height="103"/>
+    </elements>
+</model>
